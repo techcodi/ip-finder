@@ -1,0 +1,20 @@
+html {
+  font-size: 88%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}

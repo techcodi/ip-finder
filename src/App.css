@@ -1,0 +1,96 @@
+.app {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1608205897525-0cea7119ec9e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+}
+
+.app .app_container {
+  display: flex;
+  gap: 5rem;
+}
+.app_container div ul {
+  list-style-type: none;
+  background-color: #fff;
+  width: fit-content;
+  width: 110%;
+  padding: 2rem;
+  border-radius: 10px;
+  color: #000;
+}
+.app_container div {
+  margin-top: 3rem;
+}
+div ul li {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 5px;
+}
+button {
+  background: none;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+  height: 100px;
+  aspect-ratio: 1;
+  display: grid;
+  float: center;
+  padding: 8rem;
+  width: 100px;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  --c: no-repeat linear-gradient(#000 0 0);
+  background: var(--c), var(--c);
+  background-size: 25% 50%;
+  animation: l5 1.5s infinite linear;
+}
+.loader:after {
+  transform: scale(-1);
+}
+@keyframes l5 {
+  0%,
+  5% {
+    background-position: 33.4% 100%, 66.6% 100%;
+  }
+  25% {
+    background-position: 33.4% 100%, 100% 0;
+  }
+  50% {
+    background-position: 0 0, 100% 0;
+  }
+  75% {
+    background-position: 0 0, 66.6% 100%;
+  }
+  95%,
+  100% {
+    background-position: 33.4% 100%, 66.6% 100%;
+  }
+}
+@media screen and (max-width: 870px) {
+  .app .app_container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .app_container div ul {
+    width: 70%;
+  }
+  .app_container div {
+    margin-top: 1rem;
+  }
+}
